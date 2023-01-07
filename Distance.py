@@ -50,8 +50,6 @@ with pd.ExcelWriter('address_distance.xlsx') as writer:
 # mapbox ---
 import plotly.express as px
 
-api_token = 'pk.eyJ1IjoiaWNhc3RpbGxvYmFzYSIsImEiOiJjbGNtY2tlcWQwaHYyM29wNnVuMjEybXdxIn0.Sk6XC_e_YPDVW3_zsMHebg'
-
 fig = px.scatter_mapbox(
     df, lat="LATITUD", lon="LONGITUD", color='distance',
     color_continuous_scale=["black", "purple", "red" ], 
